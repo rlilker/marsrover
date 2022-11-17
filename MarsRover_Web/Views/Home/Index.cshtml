@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Mars Rover Project";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mars Rover Project</h1>
+    <p>A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete map of the surrounding terrain to send back to Earth.</a>.</p>
+</div>
+
+<div id="playarea">
+    <div id="plateau">
+        @for(int y = Model.Height; y > 0; y--) {
+            @for(int x = Model.Width; x > 0; x--) {
+                <div class="gridcell" id="grid-@x-@y"></div>
+            }    
+        }
+    </div>
+    <div id="output">
+
+    </div>
+</div>
+
+<div id="instructions">
+    <p>A rover's position and location are represented by a combination of x and y coordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.</p>
+    <p>In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot. 'M' means move forward one grid point and maintain the same heading.</p>
+    <p>Assume that the square directly North from (x, y) is (x, y+1).</p>
+</div>
+<div id="input">
+    <h2>Rover Instructions</h2>
+    <p class="help">Please provide a file in csv format named movements.csv, this file will outline each rover and it’s movements:
+    </p>
+    <form id="FileUpload" action="Home/UploadFile" enctype="multipart/form-data" method="post">
+        <input id="formFile" type="file" 
+            name="formFile" />
+
+        <span class="right">
+            <input type="submit" value="Send Instructions!" />
+        </span>
+    </form>
+</div>
+
+

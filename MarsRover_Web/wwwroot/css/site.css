@@ -1,0 +1,102 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  #playarea {
+    height: 505px;
+  }
+  #playarea::after {
+    clear: both;
+  }
+  #plateau {
+    float: left;
+  }
+  #output {
+    float: right;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+#playarea {
+  margin: 30px auto;
+}
+
+#plateau {
+  background-image: url("../assets/plateau.jpg");
+  background-color: lightgrey;
+  width: 505px;
+  height: 505px;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-auto-flow: column;
+  margin: 10px auto;
+  z-index: 0;
+  position: relative;
+}
+.gridcell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.rover {
+  background-image: url("../assets/rover.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  position: absolute;
+}
+
+#output {
+  border-radius: 4px;
+  background-color: black;
+  font: 1.0rem Inconsolata, monospace;
+  height: 505px;
+  width: 505px;
+  padding: 10px;
+  overflow-x: auto;
+  margin: 10px auto;
+}
+
+#output .red {
+  color: red;
+}
+
+#output .amber {
+  color: orange;
+}
+
+#output .white {
+  color: #fff;
+}
+
+#input {
+  min-width: 505px;
+  max-width: 715px;
+  margin: 50px auto;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 10px;
+}
+#input::after {
+  clear: both;
+}
+.right {
+  float: right;
+}
