@@ -26,6 +26,12 @@ For local development you will need to install:
 - [DotNet 6] (https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
 - [Node Js] + NPM (https://nodejs.org/en/download/)
 
+To run the app for the first time, you will need to run:
+
+- npm install
+- npm run build
+- dotnet run
+
 ### Dependencies
 
 Dependencies used in this project are:
@@ -33,9 +39,7 @@ Dependencies used in this project are:
 [XUnit](https://xunit.net/) - For Back-End Unit Testing
 [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) - For Back-End Code Coverage Report Generation
 [Jest](https://jestjs.io/) - for Front-End Unit Testing
-[InfersifyJS](https://https://inversify.io/) - For Dependency Injection and Inversion of Control
-[Rollup.js](https://rollupjs.org) - Module bundler to enable import/export of Typescript Modules
-[Babel](https://babeljs.io/) - Used by Rollup for the transpilation of Typescript into vanilla JS
+[Rollup.js](https://rollupjs.org) - Module bundler to convert ES6 Module Javascript into a single file
 
 ### How to run tests
 

@@ -2,10 +2,11 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "devDependencies": {
     "jest": "^29.3.1",
-    "jsdom": "^20.0.2"
+    "rollup": "^3.3.0"
   }
 }

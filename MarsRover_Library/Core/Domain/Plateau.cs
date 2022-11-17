@@ -24,10 +24,6 @@ public class Plateau : IPlateau
         if (!isValid) {
             message = string.Empty;
         } else {
-            var facing = rover.Orientation;
-            var positionX = rover.Position.X;
-            var positionY = rover.Position.Y;
-
             message = $"{rover.Name} added to plateau at Position {rover.Position.ToString()}, facing {rover.Orientation.ToString()}";
 
             output.Add(new Result<IRover>(rover.DeepCopy(), isValid, message));

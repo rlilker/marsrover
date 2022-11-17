@@ -3,12 +3,12 @@ import Position from '../src/position';
 describe('Position', () => {
   
   let xCoords = [
-    [1, 430],
-    [2, 330],
+    [1, 30],
+    [2, 130],
     [3, 230],
-    [4, 130],
-    [5, 30],
-  ]
+    [4, 330],
+    [5, 430],
+  ]  
 
   test.each(xCoords)('X Coordinate %p expects %p', (x, expected) => {
 
@@ -18,11 +18,11 @@ describe('Position', () => {
   });
 
   let yCoords = [
-    [1, 30],
-    [2, 130],
+    [1, 430],
+    [2, 330],
     [3, 230],
-    [4, 330],
-    [5, 430],
+    [4, 130],
+    [5, 30],
   ]
 
   test.each(yCoords)('X Coordinate %p expects %p', (y, expected) => {
