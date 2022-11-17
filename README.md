@@ -28,18 +28,18 @@ For local development you will need to install:
 
 To run the app for the first time, you will need to run:
 
-- npm install
-- npm run build
-- dotnet run
+- `npm install`
+- `npm run build`
+- `dotnet run`
 
 ### Dependencies
 
 Dependencies used in this project are:
 
-[XUnit](https://xunit.net/) - For Back-End Unit Testing
-[ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) - For Back-End Code Coverage Report Generation
-[Jest](https://jestjs.io/) - for Front-End Unit Testing
-[Rollup.js](https://rollupjs.org) - Module bundler to convert ES6 Module Javascript into a single file
+- [XUnit](https://xunit.net/) - For Back-End Unit Testing
+- [ReportGenerator](https://www.nuget.org/packages/dotnet-reportgenerator-globaltool) - For Back-End Code Coverage Report Generation
+- [Jest](https://jestjs.io/) - for Front-End Unit Testing
+- [Rollup.js](https://rollupjs.org) - Module bundler to convert ES6 Module Javascript into a single file
 
 ### How to run tests
 
@@ -47,7 +47,9 @@ Mars Rover uses XUnit for back-end unit testing, and Jest for front-end unit tes
 
 In VS Code, there is an included launch.json to enable running and debugging the tests using the Run and Debug tool. 
 
-To run the back-end tests in your CLI run `dotnet test` in the root directory, or `dotnet test --collect:"XPlat Code Coverage"` to output the Unit Test Coverage for the project. To Generate a HTML Code Coverage report, take the relative path output for the coverage.coberta.xml file and run `reportgenerator -reports:'./MarsRover_Library_Tests/TestResults/{guid}/coverage.cobertura.xml' -targetdir:'./MarsRover_Library_Tests/TestResults/CoverageReport' -reporttypes:'HTML';`
+To run the back-end tests in your CLI run `dotnet test` in the root directory, or `dotnet test --collect:"XPlat Code Coverage"` to output the Unit Test Coverage for the project. 
+
+To Generate a HTML Code Coverage report, take the relative path output for the coverage.coberta.xml file and run `reportgenerator -reports:'./MarsRover_Library_Tests/TestResults/{guid}/coverage.cobertura.xml' -targetdir:'./MarsRover_Library_Tests/TestResults/CoverageReport' -reporttypes:'HTML';`
 
 To run the front-end tests in your CLI run `npm test` in the root directory, or `npm test:coverage` to output the Unit Test Coverage for the project.
 
